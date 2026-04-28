@@ -19,9 +19,7 @@ ENV VITE_GOOGLE_CLIENT_ID=${VITE_GOOGLE_CLIENT_ID}
 ENV VITE_API_URL=${VITE_API_URL}
 ENV VITE_FASTAPI_URL=${VITE_FASTAPI_URL}
 
-# Increase Node heap for low-memory VPS and skip tsc (Vite handles TS)
-ENV NODE_OPTIONS=--max-old-space-size=1536
-RUN npx vite build
+RUN npm run build
 
 # ── Stage 2: Serve with Nginx ─────────────────────────────────────────────
 FROM nginx:alpine
