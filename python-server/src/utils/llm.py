@@ -38,7 +38,7 @@ def _extract_json(text: str) -> str:
 class LLMService:
     """Thin wrapper around Google Gemini for structured + free-text generation."""
 
-    def __init__(self, model_name: str = "gemini-3-flash-preview"):
+    def __init__(self, model_name: str = "gemini-2.5-flash"):
         self.model = genai.GenerativeModel(model_name)
 
     async def generate_structured(
@@ -139,5 +139,5 @@ def get_llm_service(provider: str = "gemini", model: str | None = None) -> LLMSe
         return _groq_llm
 
     if _default_llm is None:
-        _default_llm = LLMService(model_name=model or "gemini-3-flash-preview")
+        _default_llm = LLMService(model_name=model or "gemini-2.5-flash")
     return _default_llm
