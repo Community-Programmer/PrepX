@@ -11,7 +11,7 @@ services:
         VITE_API_URL: ${VITE_API_URL:-http://localhost:5000}
         VITE_FASTAPI_URL: ${VITE_FASTAPI_URL:-http://localhost:8000/api}
     ports:
-      - "80:80"
+      - "8080:80"
     depends_on:
       - server
       - python-server
