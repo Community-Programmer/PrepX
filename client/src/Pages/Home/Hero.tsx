@@ -46,10 +46,15 @@ const Hero = () => {
               <ArrowRight className="h-4 w-4" />
             </a>
 
-            <button className="flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-3.5 text-sm font-medium text-zinc-300 backdrop-blur-sm transition-all hover:border-white/25 hover:bg-white/10">
+            <a
+              href="https://vimeo.com/1173247902?share=copy&fl=sv&fe=ci"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-3.5 text-sm font-medium text-zinc-300 backdrop-blur-sm transition-all hover:border-white/25 hover:bg-white/10"
+            >
               <Play className="h-4 w-4 fill-current" />
               Watch Demo
-            </button>
+            </a>
           </div>
 
         </div>

@@ -19,7 +19,7 @@ const Login = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const user = useAppSelector((s) => s.auth.user);
-  const redirectTo = (location.state as { from?: string })?.from || "/courses";
+  const redirectTo = (location.state as { from?: string })?.from || "/";
 
   if (user) return <Navigate to={redirectTo} replace />;
 

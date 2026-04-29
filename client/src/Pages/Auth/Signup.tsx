@@ -28,7 +28,7 @@ const Signup = () => {
     setLoading(true);
     try {
       await dispatch(signup({ name, email, password })).unwrap();
-      navigate("/courses");
+      navigate("/");
     } catch (err) {
       setError(err instanceof Error ? err.message : String(err));
     } finally {
@@ -42,7 +42,7 @@ const Signup = () => {
       setLoading(true);
       try {
         await dispatch(googleLogin(tokenResponse.access_token)).unwrap();
-        navigate("/courses");
+        navigate("/");
       } catch (err) {
         setError(err instanceof Error ? err.message : String(err));
       } finally {
